@@ -1,0 +1,120 @@
+
+
+services:
+  # Landing Page
+  landing-page:
+    build:
+      context: ./landing-page
+      dockerfile: Dockerfile
+    container_name: ai-landing-page
+    ports:
+      - "8000:80"
+    restart: unless-stopped
+    environment:
+      - DOMAIN=${DOMAIN:-localhost}
+      - PROTOCOL=${PROTOCOL:-http}
+      - SUBDOMAIN_HEADSHOT=${SUBDOMAIN_HEADSHOT:-headshots}
+      - SUBDOMAIN_PDF=${SUBDOMAIN_PDF:-pdf}
+      - SUBDOMAIN_BASEBALL=${SUBDOMAIN_BASEBALL:-baseball}
+      - SUBDOMAIN_HAIRSTYLE=${SUBDOMAIN_HAIRSTYLE:-hairstyle}
+      - SUBDOMAIN_MATH=${SUBDOMAIN_MATH:-math}
+      - SUBDOMAIN_SHORTENER=${SUBDOMAIN_SHORTENER:-short}
+    volumes:
+      # Mount products.json as a volume so it can be edited without rebuilding
+      - ./landing-page/products.json:/usr/share/nginx/html/products.json:ro
+    networks:
+      - ai-network
+
+  # AI Headshot Photographer
+  ai-headshot-photographer:
+    build:
+      context: ./ai-headshot-photographer
+      dockerfile: Dockerfile
+      args:
+        - GEMINI_API_KEY=${GEMINI_API_KEY}
+    image: ai-headshot-photographer:latest
+    container_name: ai-headshot-photographer
+    ports:
+      - "7693:80"
+    restart: unless-stopped
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+    networks:
+      - ai-network
+
+  # AI PDF Parser and Chat
+  ai-pdf-parser:
+    build:
+      context: ./ai-pdf-parser-and-chat
+      dockerfile: Dockerfile
+      args:
+        GEMINI_API_KEY: ${GEMINI_API_KEY}
+    container_name: ai-pdf-parser
+    ports:
+      - "3951:3951"
+    restart: unless-stopped
+    networks:
+      - ai-network
+
+  # Baseball Exit Velocity
+  baseball-exitvelo:
+    build:
+      context: ./BaseballExitVelo
+      dockerfile: Dockerfile
+      args:
+        GEMINI_API_KEY: ${GEMINI_API_KEY}
+    container_name: velocity-ai-web
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    networks:
+      - ai-network
+
+  # AI Hairstyle Changer
+  ai-hairstyle-changer:
+    build:
+      context: ./HairStyle-Changer
+      dockerfile: Dockerfile
+      args:
+        API_KEY: ${API_KEY}
+    container_name: ai-hairstyle-app
+    ports:
+      - "7912:80"
+    restart: unless-stopped
+    networks:
+      - ai-network
+
+  # Socratic AI Math Tutor
+  socratic-math-tutor:
+    build:
+      context: ./socratic-ai-math-tutor
+      dockerfile: Dockerfile
+      args:
+        GEMINI_API_KEY: ${GEMINI_API_KEY}
+    container_name: socratic-ai-tutor
+    ports:
+      - "7834:80"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    networks:
+      - ai-network
+
+  # URL Shortener
+  url-shortener:
+    build:
+      context: ./z-pq-url-shortener
+      dockerfile: Dockerfile
+      args:
+        - VITE_GEMINI_API_KEY=${VITE_GEMINI_API_KEY}
+    container_name: z-pq-url-shortener
+    ports:
+      - "7429:80"
+    restart: unless-stopped
+    networks:
+      - ai-network
+
+networks:
+  ai-network:
+    driver: bridge
+    name: ai-products-network

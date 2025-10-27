@@ -1,0 +1,16 @@
+
+
+services:
+  ai-headshot-photographer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - GEMINI_API_KEY=${GEMINI_API_KEY}
+    image: ai-headshot-photographer:latest
+    container_name: ai-headshot-photographer
+    ports:
+      - "7693:80"
+    restart: unless-stopped
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}

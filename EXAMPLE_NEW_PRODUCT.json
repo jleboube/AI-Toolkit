@@ -1,0 +1,34 @@
+{
+  "comment": "Example: How to add a new product to the landing page",
+  "instructions": "Copy the product object below and add it to the 'products' array in landing-page/products.json",
+
+  "newProduct": {
+    "id": "voice-cloning",
+    "name": "AI Voice Cloning",
+    "description": "Clone any voice with just 10 seconds of audio using advanced AI voice synthesis",
+    "subdomain": "voice",
+    "port": 9500,
+    "icon": "education",
+    "animationDelay": 600,
+    "enabled": true
+  },
+
+  "availableIcons": [
+    "camera - Photography/imaging related apps",
+    "document - PDF/file related apps",
+    "sports - Sports/activity related apps",
+    "beauty - Styling/appearance related apps",
+    "education - Learning/teaching related apps",
+    "link - URL/connection related apps",
+    "default - Generic icon for anything else"
+  ],
+
+  "notes": [
+    "1. The 'id' must be unique and use kebab-case",
+    "2. The 'subdomain' will be used for production URLs (voice.leboube.ai)",
+    "3. The 'port' is used for local development (localhost:9500)",
+    "4. animationDelay should be 100ms * position (first=0, second=100, third=200, etc.)",
+    "5. Set 'enabled: false' to hide a product without deleting it",
+    "6. After editing products.json, just refresh your browser - no rebuild needed!"
+  ]
+}

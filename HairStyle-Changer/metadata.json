@@ -1,0 +1,8 @@
+{
+  "name": "AI Hairstyle Try-On",
+  "description": "An application that allows users to take a picture or upload a photo to try on various hairstyles and colors using generative AI.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ]
+}

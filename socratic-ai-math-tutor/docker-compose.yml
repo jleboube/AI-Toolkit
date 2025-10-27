@@ -1,0 +1,21 @@
+
+
+services:
+  socratic-math-tutor:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        GEMINI_API_KEY: ${GEMINI_API_KEY}
+    container_name: socratic-ai-tutor
+    ports:
+      - "7834:7834"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    networks:
+      - tutor-network
+
+networks:
+  tutor-network:
+    driver: bridge

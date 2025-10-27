@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Background circle -->
+  <circle cx="50" cy="50" r="50" fill="#4F46E5"/>
+
+  <!-- Scissors shape -->
+  <g fill="#FFFFFF">
+    <!-- Left handle -->
+    <circle cx="35" cy="35" r="6" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+    <!-- Right handle -->
+    <circle cx="65" cy="35" r="6" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+
+    <!-- Left blade -->
+    <path d="M 35 41 L 35 50 L 45 65 L 50 60 Z" fill="#FFFFFF"/>
+    <!-- Right blade -->
+    <path d="M 65 41 L 65 50 L 55 65 L 50 60 Z" fill="#FFFFFF"/>
+
+    <!-- Center pivot -->
+    <circle cx="50" cy="50" r="3" fill="#FFFFFF"/>
+  </g>
+
+  <!-- AI Sparkles -->
+  <g fill="#FCD34D">
+    <!-- Top sparkle -->
+    <path d="M 50 15 L 51.5 19 L 55 20 L 51.5 21 L 50 25 L 48.5 21 L 45 20 L 48.5 19 Z"/>
+    <!-- Right sparkle -->
+    <path d="M 75 45 L 76 47.5 L 78.5 48.5 L 76 49.5 L 75 52 L 74 49.5 L 71.5 48.5 L 74 47.5 Z"/>
+    <!-- Left sparkle -->
+    <path d="M 25 45 L 26 47.5 L 28.5 48.5 L 26 49.5 L 25 52 L 24 49.5 L 21.5 48.5 L 24 47.5 Z"/>
+    <!-- Bottom right sparkle -->
+    <path d="M 70 75 L 71 77 L 73 78 L 71 79 L 70 81 L 69 79 L 67 78 L 69 77 Z"/>
+  </g>
+</svg>

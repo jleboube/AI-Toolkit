@@ -1,0 +1,5 @@
+{
+  "name": "AI PDF Parser & Chat",
+  "description": "An intelligent split-screen application to parse PDF images into structured data and refine it using a natural language chat interface powered by Gemini.",
+  "requestFramePermissions": []
+}

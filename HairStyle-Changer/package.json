@@ -1,0 +1,21 @@
+{
+  "name": "ai-hairstyle-try-on",
+  "version": "1.0.0",
+  "description": "An application that allows users to take a picture or upload a photo to try on various hairstyles and colors using generative AI.",
+  "main": "index.tsx",
+  "scripts": {
+    "build": "esbuild index.tsx --bundle --outfile=dist/bundle.js --define:process.env.API_KEY='\"'$API_KEY'\"' --loader:.tsx=tsx --jsx=automatic",
+    "dev": "esbuild index.tsx --bundle --outfile=dist/bundle.js --define:process.env.API_KEY='\"'$API_KEY'\"' --loader:.tsx=tsx --jsx=automatic --servedir=. --serve=0.0.0.0:3000 --watch"
+  },
+  "dependencies": {
+    "@google/genai": "^1.26.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "esbuild": "^0.23.0",
+    "typescript": "^5.5.3"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "products": [
+    {
+      "id": "headshot-photographer",
+      "name": "AI Headshot Photographer",
+      "description": "Transform casual photos into professional headshots using advanced AI image processing",
+      "subdomain": "headshots",
+      "port": 7693,
+      "icon": "camera",
+      "animationDelay": 0,
+      "enabled": true
+    },
+    {
+      "id": "pdf-parser",
+      "name": "AI PDF Parser & Chat",
+      "description": "Upload PDFs and chat with your documents using intelligent AI-powered analysis",
+      "subdomain": "pdf",
+      "port": 3951,
+      "icon": "document",
+      "animationDelay": 100,
+      "enabled": true
+    },
+    {
+      "id": "baseball-velocity",
+      "name": "Baseball Exit Velocity",
+      "description": "Analyze baseball performance metrics with AI-powered velocity and trajectory insights",
+      "subdomain": "baseball",
+      "port": 8080,
+      "icon": "sports",
+      "animationDelay": 200,
+      "enabled": true
+    },
+    {
+      "id": "hairstyle-changer",
+      "name": "AI Hairstyle Changer",
+      "description": "Try different hairstyles virtually with realistic AI-generated transformations",
+      "subdomain": "hairstyle",
+      "port": 7912,
+      "icon": "beauty",
+      "animationDelay": 300,
+      "enabled": true
+    },
+    {
+      "id": "math-tutor",
+      "name": "Socratic AI Math Tutor",
+      "description": "Learn mathematics through AI-guided Socratic questioning and personalized tutoring",
+      "subdomain": "math",
+      "port": 7834,
+      "icon": "education",
+      "animationDelay": 400,
+      "enabled": true
+    },
+    {
+      "id": "url-shortener",
+      "name": "URL Shortener",
+      "description": "Create short, memorable links with AI-generated custom aliases and analytics",
+      "subdomain": "short",
+      "port": 7429,
+      "icon": "link",
+      "animationDelay": 500,
+      "enabled": true
+    }
+  ],
+  "config": {
+    "title": "AI Products Suite",
+    "subtitle": "Discover our suite of intelligent applications powered by cutting-edge AI technology",
+    "heroLine1": "Powerful AI Solutions",
+    "heroLine2": "Built for Everyone",
+    "aboutTitle": "About Our AI Suite",
+    "aboutText": "Our collection of AI-powered applications demonstrates the versatility and power of modern artificial intelligence. Each product is carefully crafted to solve real-world problems while maintaining simplicity and ease of use.",
+    "stats": {
+      "products": "auto",
+      "docker": "100%",
+      "possibilities": "∞"
+    }
+  }
+}

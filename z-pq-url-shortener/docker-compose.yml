@@ -1,0 +1,17 @@
+services:
+  url-shortener-ui:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - VITE_GEMINI_API_KEY=${VITE_GEMINI_API_KEY}
+    container_name: z-pq-url-shortener
+    ports:
+      - "7429:80"
+    restart: unless-stopped
+    networks:
+      - url-shortener-network
+
+networks:
+  url-shortener-network:
+    driver: bridge

@@ -1,0 +1,28 @@
+services:
+  web:
+    build:
+      context: .
+      args:
+        # This passes the API_KEY from your .env file into the build process
+        API_KEY: ${API_KEY}
+    ports:
+      - "7912:80"
+    restart: unless-stopped
+    container_name: ai-hairstyle-app
+    volumes:
+      # Mount source code for live editing
+      - ./index.tsx:/app/index.tsx:ro
+      - ./index.html:/app/index.html:ro
+      - ./favicon.svg:/app/favicon.svg:ro
+      - ./App.tsx:/app/App.tsx:ro
+      - ./types.ts:/app/types.ts:ro
+      - ./constants.ts:/app/constants.ts:ro
+      - ./components:/app/components:ro
+      - ./services:/app/services:ro
+      # Keep dist writeable for esbuild
+      - dist-volume:/app/dist
+    environment:
+      - API_KEY=${API_KEY}
+
+volumes:
+  dist-volume:

@@ -1,0 +1,7 @@
+{
+  "name": "Baseball Exit Velocity AI",
+  "description": "An AI-powered web application to estimate the exit velocity of a baseball from a live camera feed or an uploaded video. Using Gemini's visual analysis capabilities, the app provides an estimated speed for each hit.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
