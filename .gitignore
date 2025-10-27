@@ -1,0 +1,6 @@
+# git files and folders to ignore.
+.env
+*.env
+
+.claude
+
