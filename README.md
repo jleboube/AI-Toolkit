@@ -1,6 +1,16 @@
 # AI Products Suite
 
-A comprehensive collection of AI-powered applications, all deployable with a single command using Docker Compose.
+A comprehensive collection of AI-powered applications, all deployable with a single command using Docker Compose.'
+
+[![Docker](https://img.shields.io/badge/Docker-Friendly-2496ED?style=for-the-badge&logo=docker)](https://www.docker.com/)
+
+[![GitHub stars](https://img.shields.io/github/stars/jleboube/AI-Toolkit?style=social)](https://github.com/jleboube/AI-Toolkit/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/jleboube/AI-Toolkit?style=social)](https://github.com/jleboube/AI-Toolkit/network/members)
+[![GitHub issues](https://img.shields.io/github/issues/jleboube/AI-Toolkit)](https://github.com/jleboube/AI-Toolkit/issues)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/jleboube/AI-Toolkit)](https://github.com/jleboube/AI-Toolkit/pulls)
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CCBY--NC--SA4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/muscl3n3rd)
 
 ## Projects Included
 
